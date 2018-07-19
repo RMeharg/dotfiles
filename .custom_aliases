@@ -1,0 +1,116 @@
+#### Custom aliases #####
+
+# misc #
+alias lol="git lol"
+alias atom="atom ."
+alias vi="vim"
+alias authors="vim ~/.git-authors"
+alias vundle="vim +PluginInstall +qa"
+alias dedit="direnv edit ."
+alias de="direnv edit ."
+alias r="rake"
+alias ll="ls -lah"
+alias fly="fly -t concourse"
+
+# git commands #
+alias gc="git commit"
+alias gci="git duet-commit -v"
+alias gdc="git duet-commit -v"
+alias gdb="git config --global user.email 'ryan.meharg@emc.com' && git config --global user.name 'Ryan Meharg'"
+alias gdi="git diff"
+alias gdic="git diff --cached"
+alias gcs="git cs"
+alias ga="git add"
+alias gs="git status"
+alias gaa="git add -A"
+alias gapa="git add -p"
+alias gd="git duet"
+alias grv="git remote -v"
+alias pull="git pull -r"
+alias push="git push"
+alias fpush="git push --force-with-lease"
+alias psh="push"
+alias opsh="opush"
+alias master="git checkout master"
+alias develop="git checkout develop"
+alias dev="git checkout develop"
+alias gam="git commit --amend --no-edit"
+
+# Bosch Proxy Nonsense
+alias gitb="http_proxy=localhost:18080 https_proxy=localhost:18080 git"
+alias gitbp="gitb push --force-with-lease"
+alias cfb="http_proxy=localhost:18080 https_proxy=localhost:18080 cf"
+
+# directories #
+alias work="cd ~/workspace"
+alias temp="cd ~/workspace/TEMP"
+alias gosrc="cd ~/go/src/github.com"
+
+# vim shortcuts #
+alias readme="vim README.md"
+alias gemfile="vim Gemfile"
+alias bashp="vim ~/.bash_profile && reload"
+alias vimrc="vim ~/.vimrc"
+alias vimrcl="vim ~/.vimrc.local"
+alias gitconf="vim ~/.gitconfig"
+alias als="vim ~/.custom_aliases && reload"
+
+# docker #
+alias dl="docker ps -l -q" # Get latest container ID
+alias dps="docker ps" # Get container process
+alias dpa="docker ps -a" # Get process included stop container
+alias di="docker images" # Get images
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'" # Get container IP
+alias dkd="docker run -d -P" # Run deamonized container, e.g., $dkd base /bin/echo hello
+alias dki="docker run -i -t -P" # Run interactive container, e.g., $dki base /bin/bash
+alias dex="docker exec -i -t" # Execute interactive container, e.g., $dex base /bin/bash
+alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)' # Stop and Remove all containers
+dstop() { docker stop $(docker ps -a -q); } # Stop all containers
+drm() { docker rm $(docker ps -a -q); } # Remove all containers
+dri() { docker rmi -f $(docker images -q); } # Remove all images
+dbu() { docker build -t=$1 .; } # Dockerfile build, e.g., $dbu tcnksm/test
+dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; } # Show all alias related docker
+dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; } # Bash into running container
+
+# typos #
+alias cim="vim"
+alias ginko="ginkgo"
+alias gingko="ginkgo"
+
+# stay logged in multiple foundations #
+alias cf_captain="env CF_HOME=$HOME/.cf_captain cf"
+alias cf_bucky="env CF_HOME=$HOME/.cf_bucky cf"
+alias cf_ro10="env CF_HOME=$HOME/.cf_ro10 cf"
+alias cf_ro11="env CF_HOME=$HOME/.cf_ro11 cf"
+alias cf_prod="env CF_HOME=$HOME/.cf_prod cf"
+
+# functions #
+gt() { git tag $1; git push origin $1; }
+which_port() { lsof -i :$1; }
+aux() { ps aux | ag $1; }
+
+# Kubernetes
+# alias kdelete="kubectl delete svc,rc --all" #
+# alias kdelete2="kubectl delete $(kubectl get rc,svc -o name)"
+# alias kwatch="kubectl get ev -w" # Watch for events
+# alias kdebug="kubectl logs --previous pod" # Debug
+# alias ktest="kubectl run busybox --image=busybox" # Run a simple container
+# alias kservices="kubectl get svc --all-namespaces"
+# kdebugcont1() { kubectl run curlpod --image=radial/busyboxplus:curl --command -- /bin/sh -c "while true; do echo hi; sleep 10; done" }
+# kdebugcont2() { kubectl exec -it curlpod-5f0mh nslookup redis }
+#kuploadfile() { kubectl exec -i ghost-deployment-1955090760-zivlz -- /bin/bash -c 'cat > /tmp/testfile.txt' < $1 }
+
+# schema / avaiable fields for rc/pods/svc ...
+# https://github.com/kubernetes/kubernetes/blob/master/pkg/api/types.go
+
+# a simple service
+# https://github.com/kubernetes/kubernetes/blob/master/docs/user-guide/walkthrough/service.yaml
+
+# available signals for a pod
+# https://github.com/luebken/httplog/blob/signals/rc.yml
+
+# more debug
+# http://kubernetes.io/v1.1/docs/user-guide/debugging-services.html
+
+# End Kubernetes
+

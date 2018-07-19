@@ -1,0 +1,95 @@
+" Use solarized color scheme
+set background=dark
+let g:solarized_termtrans = 1
+silent! colorscheme solarized " better visual highlight, 12 is good for fg highlight Visual ctermfg=4 ctermbg=7 highlight Visual guifg=#2E8CCF guibg=#EEE8D6 highlight Cursor guifg=black guibg=white
+" Close nerdtree when vim closes
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" allows y and p to clipboard vim > 7.4
+set clipboard=unnamed
+
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
+
+" Highlight tabs
+set list
+set listchars=tab:>-
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+" turn off whitespace characters
+"set nolist
+
+" ignore case by default
+set ignorecase
+
+" turn off swap files
+set noswapfile
+
+" sets vim splits to default right and bottom
+set splitbelow
+set splitright
+
+" something about tabs
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" makes highlight searching very visible
+hi Search cterm=inverse ctermfg=white
+
+" disable man pages
+nnoremap K <NOP>
+
+" default ctrlp mode
+nnoremap <C-p> :CtrlPCurWD<CR>
+
+" auto-strip whitespace on save
+autocmd BufEnter * EnableStripWhitespaceOnSave
+
+" vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = 'goimports'
+let g:go_fmt_fail_silently = 1
+let g:go_metalinter_autosave_enabled = 1
+
+" don't hide quotes in json
+let g:vim_json_syntax_conceal = 0
+
+" don't fold markdown by default
+let g:vim_markdown_folding_disabled = 1
+
+" syntax checking
+let g:syntastic_html_checkers=['']
+let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_go_checkers = ['go']
+
+let g:indent_guides_enable_on_vim_startup=0
+
+" disable folding
+set nofoldenable
+
+" disable vim preview window
+set completeopt-=preview
+
+" set ruby tab length
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+
+" set javascript tab length
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2
+
+" disable mouse from term
+set mouse=
+
+" Remap Enter to save buffer
+nnoremap <expr> <silent> <CR> &modifiable ? ":update<CR>" : "<CR>"
+
+" Undo after
+if has('persistent_undo')      "check if your vim version supports it
+  set undofile                 "turn on the feature
+  set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
+endif
