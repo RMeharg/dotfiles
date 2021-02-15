@@ -3069,3 +3069,5 @@ brew 'base64'
 
 # Everything else (custom)
 cask shiftit
+
+brew romkatv/powerlevel10k/powerlevel10k

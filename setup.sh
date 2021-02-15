@@ -11,6 +11,7 @@ echo "Creating/updating symlinks..."
 ln -sf "${SCRIPT_DIR}"/.zshrc ~/.zshrc
 ln -sf "${SCRIPT_DIR}"/.antigen.zsh ~/.antigen.zsh
 ln -sf "${SCRIPT_DIR}"/.antigenrc ~/.antigenrc
+ln -sf "${SCRIPT_DIR}"/.p10k.zsh ~/.p10k.zsh
 
 ln -sf "${SCRIPT_DIR}"/.brewfile ~/.brewfile
 
