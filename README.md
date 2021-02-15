@@ -4,7 +4,7 @@ Use `setup.sh` to setup symlinks and themes so that updates and changes are comm
 
 Personal configuration for:
 
-- bash
+- zsh
 - iTerm
 - git
 - tmux
