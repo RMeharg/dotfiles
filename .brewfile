@@ -23,6 +23,8 @@ tap 'homebrew/core'
 tap 'homebrew/bundle'
 tap 'homebrew/services'
 
+tap cloudfoundry/tap
+
 ###########################################################################
 #
 # SOFTWARE THAT IS TYPICALLY FINE FOR EVERYONE
@@ -363,7 +365,7 @@ brew 'fzf'
 #brew 'zoxide'
 
 # jdupes: detect duplicate files
-brew 'jdupes'
+#brew 'jdupes'
 
 ##
 # Command line system operator helpers
@@ -470,10 +472,10 @@ brew 'jq'
 brew 'yq'
 
 # xsv is for CSV file parsing, and is fast, full featured, and flexible.
-brew 'xsv'
+#brew 'xsv'
 
 # Tad is CSV viewer with features for pivot, search, etc.
-cask 'tad'
+#cask 'tad'
 
 ##
 # Cross-platform tooling
@@ -495,14 +497,14 @@ cask 'tad'
 ##
 
 # Image libraries
-brew 'libgphoto2'
-brew 'libpng'
-brew 'libtiff'
+#brew 'libgphoto2'
+#brew 'libpng'
+#brew 'libtiff'
 
 ## Multimedia players
 
 # Chafa image viewer using terminal emulator
-brew 'chafa'
+#brew 'chafa'
 
 # VLC media player
 cask 'vlc'
@@ -627,13 +629,13 @@ cask 'eqmac'
 ##
 
 # Fontconfig is a library for configuring and customizing font access.
-brew 'fontconfig'
+#brew 'fontconfig'
 
 # FreeType is a freely available software library to render fonts.
 #brew 'freetype'
 
 # Command-line programs for manipulating fonts
-brew 'lcdf-typetools'
+#brew 'lcdf-typetools'
 
 ##
 # Dupes
@@ -910,20 +912,20 @@ cask 'zoomus'
 #mas 'Pages', id: 409201541
 
 # Our favorites
-#mas "Apple Configurator 2", id: 1037126344
+mas "Apple Configurator 2", id: 1037126344
 #mas "Blackmagic Disk Speed Test", id: 425264550
-#mas "Brightness Slider", id: 456624497
-#mas "Color Picker", id: 641027709
+mas "Brightness Slider", id: 456624497
+mas "Color Picker", id: 641027709
 #mas "Deliveries", id: 924726344
-#mas "Expressions", id: 913158085
+mas "Expressions", id: 913158085
 #mas "InspectPNG", id: 498851708
 #mas "PCalc", id: 403504866
 #mas "Pixelmator", id: 407963104
-#mas "Telegram", id: 747648890
+mas "Telegram", id: 747648890
 #mas "Textual", id: 896450579
 #mas "Trello", id: 1278508951
 #mas "Tweetbot", id: 557168941
-#mas 'Simplenote', id: 692867256
+mas 'Simplenote', id: 692867256
 #mas 'Sip', id: 507257563
 #mas 'Slack', id: 803453959
 #mas 'Todoist', id: 585829637
@@ -3061,13 +3063,24 @@ brew 'base64'
 # brew 'znc'
 # brew 'zookeeper'
 # brew 'zsh'
-# brew 'zsh-completions'
+brew 'zsh-completions'
 # brew 'zsh-lovers'
 # brew 'zssh'
 # brew 'zsync'
 # brew 'zzuf'
 
 # Everything else (custom)
-cask shiftit
-
 brew romkatv/powerlevel10k/powerlevel10k
+brew octant
+cask lens
+cask shiftit
+cask visual-studio-code
+#cask telegram
+cask flycut
+cask webex-meetings
+cask microsoft-teams
+
+brew bosh-cli
+brew bbl
+
+cask google-cloud-sdk
