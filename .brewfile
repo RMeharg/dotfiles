@@ -23,7 +23,8 @@ tap 'homebrew/core'
 tap 'homebrew/bundle'
 tap 'homebrew/services'
 
-tap cloudfoundry/tap
+tap 'cloudfoundry/tap'
+tap 'starkandwayne/cf'
 
 ###########################################################################
 #
@@ -291,21 +292,21 @@ cask 'sourcetree'
 ##
 
 # Basic file, shell and text manipulation utilities of the GNU operating system.
-brew 'coreutils'
+#brew 'coreutils'
 
-brew 'binutils'
-brew 'diffutils'
-brew 'ed'
-brew 'findutils'
-brew 'gawk'
-brew 'gnu-indent'
-brew 'gnu-sed'
-brew 'gnu-tar'
-brew 'gnu-which'
-brew 'gnutls'
-brew 'gzip'
-brew 'watch'
-brew 'wdiff'
+#brew 'binutils'
+#brew 'diffutils'
+#brew 'ed'
+#brew 'findutils'
+#brew 'gawk'
+#brew 'gnu-indent'
+#brew 'gnu-sed'
+#brew 'gnu-tar'
+#brew 'gnu-which'
+#brew 'gnutls'
+#brew 'gzip'
+#brew 'watch'
+#brew 'wdiff'
 
 ##
 # Some GNU command line tools already exist by default on OS X.
@@ -3084,3 +3085,5 @@ brew bosh-cli
 brew bbl
 
 cask google-cloud-sdk
+
+brew spruce
