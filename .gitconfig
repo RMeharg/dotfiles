@@ -26,3 +26,5 @@
 [user]
 	email = ryanmeharg@gmail.com
 	name = Ryan Meharg
+[pull]
+	rebase = true
