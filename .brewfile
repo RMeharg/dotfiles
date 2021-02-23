@@ -18,8 +18,6 @@ tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/core'
-#tap 'homebrew/boneyard'
-#tap 'homebrew/dev-tools'
 tap 'homebrew/bundle'
 tap 'homebrew/services'
 
@@ -313,11 +311,11 @@ cask 'sourcetree'
 # We choose to replace these with newer versions.
 ##
 
-brew 'gdb'  # gdb requires further actions to make it work. See `brew info gdb`.
-brew 'gpatch'
-brew 'm4'
-brew 'make'
-brew 'nano'
+#brew 'gdb'  # gdb requires further actions to make it work. See `brew info gdb`.
+#brew 'gpatch'
+#brew 'm4'
+#brew 'make'
+#brew 'nano'
 
 ##
 # System related
@@ -964,7 +962,7 @@ mas 'Simplenote', id: 692867256
 #brew 'codeclimate'
 
 # Command-line programs for manipulating fonts
-brew 'lcdf-typetools'
+#brew 'lcdf-typetools'
 
 ##
 # Shell
@@ -987,7 +985,7 @@ brew 'bats'
 ##
 
 # GNU inetutils contains telnet, ftp, etc.
-brew 'inetutils'
+#brew 'inetutils'
 
 # Shuttle: simple SSH shortcut menu
 #cask 'shuttle'
@@ -3076,7 +3074,6 @@ brew octant
 cask lens
 cask shiftit
 cask visual-studio-code
-#cask telegram
 cask flycut
 cask webex-meetings
 cask microsoft-teams
