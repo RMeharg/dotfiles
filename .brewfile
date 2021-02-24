@@ -3069,18 +3069,16 @@ brew 'zsh-completions'
 # brew 'zzuf'
 
 # Everything else (custom)
-brew romkatv/powerlevel10k/powerlevel10k
-brew octant
-cask lens
-cask shiftit
-cask visual-studio-code
-cask flycut
-cask webex-meetings
-cask microsoft-teams
+brew 'romkatv/powerlevel10k/powerlevel10k'
+brew 'octant'
+cask 'lens'
+cask 'shiftit'
+cask 'visual-studio-code'
+cask 'flycut'
+cask 'webex-meetings'
+cask 'microsoft-teams'
 
-brew bosh-cli
-brew bbl
+brew 'bosh-cli'
+brew 'bbl'
 
-cask google-cloud-sdk
-
-brew spruce
+brew 'spruce'
