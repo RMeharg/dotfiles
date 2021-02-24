@@ -3080,5 +3080,7 @@ cask 'microsoft-teams'
 
 brew 'bosh-cli'
 brew 'bbl'
+brew 'cloudfoundry/tap/cf-cli@6'
+brew 'cloudfoundry/tap/credhub-cli'
 
 brew 'spruce'
