@@ -1,11 +1,23 @@
 #!/usr/bin/env bash
 
-# Fail immediately if any errors occur
-set -x
-set -eu
-set -o pipefail
+set -euf -o pipefail
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+root_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+# shellcheck source=helpers/utils.sh
+source "$root_dir/helpers/utils.sh"
+
+if ! is_macos; then
+  echo "Unrecognized system uname: $(uname -s) - exiting"
+else
+  "$root_dir"/homebrew/install.sh
+  "$root_dir"/vim/install.sh
+  "$root_dir"/zsh/install.sh
+  "$root_dir"/homeshick/install.sh
+  "$root_dir"/tmux/install.sh
+fi
+
+exit 0 
 
 echo "Creating/updating symlinks..."
 ln -sf "${SCRIPT_DIR}"/.zshrc ~/.zshrc

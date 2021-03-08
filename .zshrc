@@ -22,12 +22,6 @@ source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 # Homebrew add sbin to PATH
 export PATH="/usr/local/sbin:$PATH"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/altoros/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/altoros/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 # This speeds up pasting w/ autosuggest
 # https://github.com/zsh-users/zsh-autosuggestions/issues/238
 pasteinit() {
@@ -40,3 +34,44 @@ pastefinish() {
 }
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
+
+# Add z dir nav
+eval "$(zoxide init zsh)"
+
+HISTFILE=~/.zsh_history # I'll cry if I lose my history
+HISTSIZE=500000
+SAVEHIST=$HISTSIZE
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/altoros/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/altoros/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Color kubectl
+alias kubectl="kubecolor "
+# kubectl completion
+source <(kubectl completion zsh)
+# kubectl Alias
+alias k=kubectl
+complete -F __start_kubectl k # Allow autocomplete k
+# kubectl aliases from https://github.com/ahmetb/kubectl-aliases
+[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+# Print full command before exec
+function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
+# kubectl krew plugins
+export PATH="${PATH}:${HOME}/.krew/bin"
+
+alias gs='git status'
+alias gaa='git add -A'
+alias gam='git commit --amend --no-edit --reset-author'
+alias push='git push'
+alias fpush='git push --force'
+alias repush='git add -A && git commit --amend --no-edit --reset-author && git push --force'
+
+alias watch='watch '
+
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+# buildpacks.io completion
+. $(pack completion --shell zsh)

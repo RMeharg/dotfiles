@@ -96,7 +96,7 @@ brew 'tmate'
 #brew 'screen'
 
 # ngrok opens a secure tunnel to localhost
-cask 'ngrok'
+#cask 'ngrok'
 
 ##
 # Shells
@@ -298,12 +298,12 @@ cask 'sourcetree'
 #brew 'findutils'
 #brew 'gawk'
 #brew 'gnu-indent'
-#brew 'gnu-sed'
+brew 'gnu-sed'
 #brew 'gnu-tar'
 #brew 'gnu-which'
 #brew 'gnutls'
 #brew 'gzip'
-#brew 'watch'
+brew 'watch'
 #brew 'wdiff'
 
 ##
@@ -361,7 +361,7 @@ brew 'fd'
 brew 'fzf'
 
 # The `z` command to `cd` among directories.
-#brew 'zoxide'
+brew 'zoxide'
 
 # jdupes: detect duplicate files
 #brew 'jdupes'
@@ -656,34 +656,34 @@ cask 'eqmac'
 #
 ##
 
-brew 'awk'
-brew 'diffstat'
-brew 'diffutils'
-brew 'ed'
-brew 'expect'
-brew 'fetchmail'
-brew 'file-formula'
-brew 'gdb'
-brew 'gpatch'
-brew 'gperf'
-brew 'groff'
-brew 'heimdal'
-brew 'lapack'
-brew 'libedit'
-brew 'libiconv'
-brew 'libpcap'
-brew 'lsof'
-brew 'm4'
-brew 'make'
-brew 'nano'
-brew 'ncurses'
-brew 'openldap'
-brew 'openssh'
-brew 'tcl-tk'
-brew 'tcpdump'
-brew 'gnu-units'
-brew 'whois'
-brew 'zlib'
+#brew 'awk'
+#brew 'diffstat'
+#brew 'diffutils'
+#brew 'ed'
+#brew 'expect'
+#brew 'fetchmail'
+#brew 'file-formula'
+#brew 'gdb'
+#brew 'gpatch'
+#brew 'gperf'
+#brew 'groff'
+#brew 'heimdal'
+#brew 'lapack'
+#brew 'libedit'
+#brew 'libiconv'
+#brew 'libpcap'
+#brew 'lsof'
+#brew 'm4'
+#brew 'make'
+#brew 'nano'
+#brew 'ncurses'
+#brew 'openldap'
+#brew 'openssh'
+#brew 'tcl-tk'
+#brew 'tcpdump'
+#brew 'gnu-units'
+#brew 'whois'
+#brew 'zlib'
 
 ##
 # Brew cask enables installing typical Mac OS X applications.
@@ -1010,7 +1010,7 @@ cask 'postman'
 ##
 
 # Apache Maven is a software project management and comprehension tool.
-brew 'maven'
+#brew 'maven'
 
 # Apache Spark is for analyitcs
 #brew 'apache-spark'
@@ -1442,7 +1442,7 @@ tap 'wallix/awless'
 brew 'awless'
 
 # Google Cloud Platform (GCP)
-#brew 'gcloud'
+brew 'gcloud'
 
 # Heroku app hosting
 #brew 'heroku'
@@ -1470,7 +1470,7 @@ brew 'terraform'
 ## Configuration management
 
 # Ansible is a simple way to automate apps and IT infrastructure.
-#brew 'ansible'
+brew 'ansible'
 
 ## Containeriztion
 
@@ -1579,38 +1579,38 @@ cask 'omnioutliner'
 ##
 
 # THe libevent API provides provides asynchronous event notification and callbacks.
-brew 'libevent'
+#brew 'libevent'
 
 # Magic number recognition library for file types.
-brew 'libmagic'
+#brew 'libmagic'
 
 # Audio/Visual converters
-brew 'libav'
+#brew 'libav'
 
 # Curl web fetcher
 #brew 'libcurl'  # EOL
 
 # Foreign Function Interface Library
-brew 'libffi'
+#brew 'libffi'
 
 # Text encoding
-brew 'libiconv'
+#brew 'libiconv'
 
 # File magic number recognizer
-brew 'libmagic'
+#brew 'libmagic'
 
 # Sodium secure cryptography
-brew 'libsodium'
+#brew 'libsodium'
 
 # GNU libtool is a generic library support script.
-brew 'libtool'
+#brew 'libtool'
 
 # XML handlers
-brew 'libxml2'
-brew 'libxslt'
+#brew 'libxml2'
+#brew 'libxslt'
 
 # High-level interface to X.509 and CMS (Cryptographic Message Syntax)
-brew 'libksba'
+#brew 'libksba'
 
 # YAML markup language
 brew 'libyaml'
@@ -1619,9 +1619,9 @@ brew 'libyaml'
 brew 'yamllint'
 
 # Images
-brew 'libjpg'
-brew 'libpng'
-brew 'libtiff'
+#brew 'libjpg'
+#brew 'libpng'
+#brew 'libtiff'
 
 ###########################################################################
 #
@@ -3068,6 +3068,13 @@ brew 'zsh-completions'
 # brew 'zsync'
 # brew 'zzuf'
 
+# CloudFoundry / BOSH
+brew 'bbl'
+brew 'bosh-cli'
+brew 'cloudfoundry/tap/cf-cli@6'
+brew 'cloudfoundry/tap/credhub-cli'
+brew 'spruce'
+
 # Everything else (custom)
 brew 'romkatv/powerlevel10k/powerlevel10k'
 brew 'octant'
@@ -3077,10 +3084,13 @@ cask 'visual-studio-code'
 cask 'flycut'
 cask 'webex-meetings'
 cask 'microsoft-teams'
+brew 'pip'
+brew 'govc'
+brew 'krew'
+brew 'kube-ps1'
+brew 'kubectx'
+brew 'k9s'
+brew 'helm'
+brew 'helmfile'
 
-brew 'bosh-cli'
-brew 'bbl'
-brew 'cloudfoundry/tap/cf-cli@6'
-brew 'cloudfoundry/tap/credhub-cli'
-
-brew 'spruce'
+brew 'buildpacks/tap/pack'
