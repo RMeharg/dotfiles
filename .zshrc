@@ -75,3 +75,7 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # buildpacks.io completion
 . $(pack completion --shell zsh)
+
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
+

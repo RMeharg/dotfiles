@@ -43,7 +43,7 @@ cask 'firefox'
 cask 'firefox-developer-edition'
 
 # Brave web browser, which features security by default.
-#cask 'brave-browser'
+cask 'brave-browser'
 
 # Google Chrome web browser
 cask 'google-chrome'
