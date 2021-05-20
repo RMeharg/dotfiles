@@ -3077,6 +3077,7 @@ brew 'spruce'
 
 # Everything else (custom)
 brew 'romkatv/powerlevel10k/powerlevel10k'
+brew 'buildpacks/tap/pack'
 brew 'octant'
 cask 'lens'
 cask 'shiftit'
@@ -3092,5 +3093,7 @@ brew 'kubectx'
 brew 'k9s'
 brew 'helm'
 brew 'helmfile'
+brew 'kind'
+brew 'kind'
 
-brew 'buildpacks/tap/pack'
+

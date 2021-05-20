@@ -47,14 +47,14 @@ if [ -f '/Users/altoros/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Use
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/altoros/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+#
+# ZSH plugins
+plugins=(git git-flow brew history node npm kubectl)
 
 # Color kubectl
 alias kubectl="kubecolor "
-# kubectl completion
-source <(kubectl completion zsh)
 # kubectl Alias
 alias k=kubectl
-complete -F __start_kubectl k # Allow autocomplete k
 # kubectl aliases from https://github.com/ahmetb/kubectl-aliases
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 # Print full command before exec
@@ -62,12 +62,18 @@ function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
 # kubectl krew plugins
 export PATH="${PATH}:${HOME}/.krew/bin"
 
+# kubectl completion
+source <(kubectl completion zsh | sed '/_bash_comp/ s/^#*/#/')
+complete -F __start_kubectl k # Allow autocomplete k
+
 alias gs='git status'
 alias gaa='git add -A'
 alias gam='git commit --amend --no-edit --reset-author'
 alias push='git push'
 alias fpush='git push --force'
 alias repush='git add -A && git commit --amend --no-edit --reset-author && git push --force'
+alias finder='open .'
+alias gc='git commit -S -m'
 
 alias watch='watch '
 
@@ -79,3 +85,5 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 
+export GPG_TTY=$(tty)
+source ~/.helmrc
