@@ -3096,4 +3096,4 @@ brew 'helmfile'
 brew 'kind'
 brew 'kind'
 
-
+brew 'neovim'
