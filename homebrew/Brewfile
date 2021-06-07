@@ -23,6 +23,7 @@ tap 'homebrew/services'
 
 tap 'cloudfoundry/tap'
 tap 'starkandwayne/cf'
+tap 'vmware-tanzu/carvel'
 
 ###########################################################################
 #
@@ -3097,3 +3098,11 @@ brew 'kind'
 brew 'kind'
 
 brew 'neovim'
+
+# VMWare Carvel
+brew 'ytt'
+brew 'kbld'
+brew 'kapp'
+brew 'kwt'
+brew 'imgpkg'
+brew 'vendir'

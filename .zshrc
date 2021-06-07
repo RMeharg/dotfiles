@@ -17,7 +17,7 @@ source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/workspace/github/rmeharg/dotfiles/.p10k.zsh.
-[[ ! -f ~/workspace/github/rmeharg/dotfiles/.p10k.zsh ]] || source ~/workspace/github/rmeharg/dotfiles/.p10k.zsh
+[[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
 
 # Homebrew add sbin to PATH
 export PATH="/usr/local/sbin:$PATH"
@@ -42,12 +42,6 @@ HISTFILE=~/.zsh_history # I'll cry if I lose my history
 HISTSIZE=500000
 SAVEHIST=$HISTSIZE
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/altoros/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/altoros/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-#
 # ZSH plugins
 plugins=(git git-flow brew history node npm kubectl)
 
@@ -87,3 +81,9 @@ export GOPATH=$(go env GOPATH)
 
 export GPG_TTY=$(tty)
 source ~/.helmrc
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/altoros/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/altoros/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
