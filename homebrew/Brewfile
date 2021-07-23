@@ -3076,6 +3076,14 @@ brew 'cloudfoundry/tap/cf-cli@6'
 brew 'cloudfoundry/tap/credhub-cli'
 brew 'spruce'
 
+# VMWare Carvel
+brew 'ytt'
+brew 'kbld'
+brew 'kapp'
+brew 'kwt'
+brew 'imgpkg'
+brew 'vendir'
+
 # Everything else (custom)
 brew 'romkatv/powerlevel10k/powerlevel10k'
 brew 'buildpacks/tap/pack'
@@ -3092,17 +3100,10 @@ brew 'krew'
 brew 'kube-ps1'
 brew 'kubectx'
 brew 'k9s'
+brew 'k6'
 brew 'helm'
 brew 'helmfile'
 brew 'kind'
-brew 'kind'
-
 brew 'neovim'
+brew 'hadolint'
 
-# VMWare Carvel
-brew 'ytt'
-brew 'kbld'
-brew 'kapp'
-brew 'kwt'
-brew 'imgpkg'
-brew 'vendir'

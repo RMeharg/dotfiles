@@ -5,9 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Load Antigen
+## Load Antigen
 source ~/.antigen.zsh
-# Load Antigen configurations
+## Load Antigen configurations
 antigen init ~/.antigenrc
 
 # Powerlevel10k
@@ -35,30 +35,12 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
-# Add z dir nav
-eval "$(zoxide init zsh)"
-
 HISTFILE=~/.zsh_history # I'll cry if I lose my history
 HISTSIZE=500000
 SAVEHIST=$HISTSIZE
 
 # ZSH plugins
-plugins=(git git-flow brew history node npm kubectl)
-
-# Color kubectl
-alias kubectl="kubecolor "
-# kubectl Alias
-alias k=kubectl
-# kubectl aliases from https://github.com/ahmetb/kubectl-aliases
-[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
-# Print full command before exec
-function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
-# kubectl krew plugins
-export PATH="${PATH}:${HOME}/.krew/bin"
-
-# kubectl completion
-source <(kubectl completion zsh | sed '/_bash_comp/ s/^#*/#/')
-complete -F __start_kubectl k # Allow autocomplete k
+plugins=(osx git git-flow brew history node npm kubectl)
 
 alias gs='git status'
 alias gaa='git add -A'
@@ -68,7 +50,6 @@ alias fpush='git push --force'
 alias repush='git add -A && git commit --amend --no-edit --reset-author && git push --force'
 alias finder='open .'
 alias gc='git commit -S -m'
-
 alias watch='watch '
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
@@ -84,6 +65,25 @@ source ~/.helmrc
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/altoros/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
-
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/altoros/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
+
+#autoload -U compinit promptinit
+#promptinit
+#prompt pure
+#compinit
+
+autoload -U compinit
+compinit
+
+# kubectl completion
+source <(kubectl completion zsh)
+complete -F __start_kubectl kubectl
+complete -F __start_kubectl kubecolor
+alias k=kubecolor
+## kubectl krew plugins
+export PATH="${PATH}:${HOME}/.krew/bin"
+## kubectl aliases from https://github.com/ahmetb/kubectl-aliases
+#[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+## Print full command before exec
+#function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
