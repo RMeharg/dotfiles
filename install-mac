@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="nvim,tmux,zsh,personal,mac,homebrew"
+    export STOW_FOLDERS="nvim,tmux,zsh,personal,mac,homebrew"
 fi
 
 if [[ -z $DOTFILES ]]; then
-    DOTFILES=$HOME/.dotfiles
+    export DOTFILES=$HOME/.dotfiles
 fi
 
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
