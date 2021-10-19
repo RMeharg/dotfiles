@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euf -o pipefail
+
+# prereqs
+which git curl ruby > /dev/null
+echo "Prerequisites OK!"
+
+# get brew if not found
+if ! (command -v brew >/dev/null); then
+  echo "Downloading Homebrew..."
+  $(command -v ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  echo "Homebrew already installed."
+fi
+
+# brew lifecycle
+echo "Updating Homebrew..."
+brew update
+echo "Running brew bundle..."
+brew bundle --no-upgrade --file=Brewfile || true
+echo "Upgrading packages..."
+brew upgrade
+echo "Cleaning up Homebrew installation..."
+brew cleanup
