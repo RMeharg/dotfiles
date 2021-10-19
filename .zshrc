@@ -40,7 +40,7 @@ HISTSIZE=500000
 SAVEHIST=$HISTSIZE
 
 # ZSH plugins
-plugins=(osx git git-flow brew history node npm kubectl)
+plugins=(osx git git-flow brew history node npm kubectl vi-mode)
 
 alias gs='git status'
 alias gaa='git add -A'
@@ -51,6 +51,7 @@ alias repush='git add -A && git commit --amend --no-edit --reset-author && git p
 alias finder='open .'
 alias gc='git commit -S -m'
 alias watch='watch '
+alias vim='nvim'
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
@@ -63,27 +64,31 @@ export GOPATH=$(go env GOPATH)
 export GPG_TTY=$(tty)
 source ~/.helmrc
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/altoros/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/altoros/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then . '/Users/altoros/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
+# gcloud
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
-#autoload -U compinit promptinit
-#promptinit
-#prompt pure
-#compinit
-
+# Slow shell but use kubecolor autocomplete
 autoload -U compinit
 compinit
-
-# kubectl completion
-source <(kubectl completion zsh)
-complete -F __start_kubectl kubectl
-complete -F __start_kubectl kubecolor
 alias k=kubecolor
+
 ## kubectl krew plugins
 export PATH="${PATH}:${HOME}/.krew/bin"
-## kubectl aliases from https://github.com/ahmetb/kubectl-aliases
-#[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
-## Print full command before exec
-#function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
+
+export EDITOR=/usr/local/bin/nvim
+export VISUAL=/usr/local/bin/nvim
+
+# Vi-mode
+#bindkey -v
+
+# load z
+if command -v brew >/dev/null 2>&1; then
+	[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+fi
+
+# Python
+alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3.9
+export PATH="$PATH:/Users/altoros/Library/Python/3.9/bin"
+

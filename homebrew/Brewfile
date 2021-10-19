@@ -516,7 +516,7 @@ cask 'vlc'
 #cask 'airfoil'
 
 # eqMac2: System-wide Audio Equalizer for the Mac; free open source
-cask 'eqmac'
+#cask 'eqmac'
 
 
 ## Multimedia editors
@@ -1454,14 +1454,14 @@ brew 'gcloud'
 #brew 'qemu'
 
 # VirtualBox creates and configures portable development environments, by Oracle.
-#cask 'virtualbox'
+cask 'virtualbox'
 
 # VMWare Fusion virutal machines
 #cask 'vmware-fusion'
 
 # Vagrant lightweight, reproducible, portable development environments
-#cask 'vagrant'
-#cask 'vagrant-manager'
+cask 'vagrant'
+cask 'vagrant-manager'
 
 ## Provisioning
 
@@ -3106,4 +3106,8 @@ brew 'helmfile'
 brew 'kind'
 brew 'neovim'
 brew 'hadolint'
-
+brew 'stow'
+brew 'tanzu-community-edition'
+brew 'velero'
+brew 'jenv'
+brew 'minio/stable/mc'
