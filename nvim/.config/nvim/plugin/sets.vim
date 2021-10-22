@@ -1,3 +1,5 @@
+set path+=**
+
 set background=dark
 
 set guicursor=
@@ -34,16 +36,3 @@ set updatetime=50
 set shortmess+=c
 
 set colorcolumn=80
-
-call plug#begin('~/.vim/plugged')
-
-" telescope requirements...
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
-
-Plug 'vim-conf-live/vimconflive2021-colorscheme'
-Plug 'flazz/vim-colorschemes'
-Plug 'chriskempson/base16-vim'
-
