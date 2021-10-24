@@ -892,7 +892,7 @@ cask 'osxfuse'
 
 #cask 'teamviewer'
 #cask 'unity-web-player'
-cask 'zoomus'
+cask 'zoom'
 
 ##
 # Mac App Store

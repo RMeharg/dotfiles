@@ -17,7 +17,7 @@ fi
 echo "Updating Homebrew..."
 brew update
 echo "Running brew bundle..."
-brew bundle --no-upgrade --file=Brewfile || true
+brew bundle --no-upgrade --file=~/.brewfile || true
 echo "Upgrading packages..."
 brew upgrade
 echo "Cleaning up Homebrew installation..."
