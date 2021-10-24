@@ -1,4 +1,7 @@
-let g:theprimeagen_colorscheme = "gruvbox"
+syntax enable
+set background=dark
+let g:default_colorscheme = "gruvbox"
+
 fun! ColorMyPencils()
     let g:gruvbox_contrast_dark = 'hard'
     if exists('+termguicolors')
@@ -9,7 +12,7 @@ fun! ColorMyPencils()
 
     set background=dark
     if has('nvim')
-        call luaeval('vim.cmd("colorscheme " .. _A[1])', [g:theprimeagen_colorscheme])
+        call luaeval('vim.cmd("colorscheme " .. _A[1])', [g:default_colorscheme])
     else
         colorscheme gruvbox
     endif
@@ -29,4 +32,4 @@ call ColorMyPencils()
 
 " Vim with me
 nnoremap <leader>cmp :call ColorMyPencils()<CR>
-nnoremap <leader>vwb :let g:theprimeagen_colorscheme =
+nnoremap <leader>vwb :let g:default_colorscheme =

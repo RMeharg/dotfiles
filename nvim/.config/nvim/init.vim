@@ -51,6 +51,7 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'vim-conf-live/vimconflive2021-colorscheme'
 Plug 'flazz/vim-colorschemes'
 Plug 'chriskempson/base16-vim'
+Plug 'altercation/vim-colors-solarized'
 
 " HARPOON!!
 
