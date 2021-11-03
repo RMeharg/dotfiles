@@ -60,4 +60,24 @@ Plug 'mhinz/vim-rfc'
 " prettier
 Plug 'sbdchd/neoformat'
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+" (Optional) Multi-entry selection UI.
+Plug 'junegunn/fzf'
+
+" Lintng like a god
+Plug 'neomake/neomake'
+
+" Git goodness
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
+call neomake#configure#automake('w')
+" lua require'lspconfig'.bashls.setup{}
+
+let mapleader = " "
+let g:neomake_virtualtext_current_error = 0
+

@@ -3111,3 +3111,6 @@ brew 'tanzu-community-edition'
 brew 'velero'
 brew 'jenv'
 brew 'minio/stable/mc'
+
+cask 'fly'
+cask 'powershell'

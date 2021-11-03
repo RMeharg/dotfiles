@@ -45,8 +45,11 @@ alias gam='git commit --amend --no-edit --reset-author'
 alias push='git push'
 alias fpush='git push --force'
 alias repush='git add -A && git commit --amend --no-edit --reset-author && git push --force'
-alias finder='open .'
+alias pull='git pull --rebase'
 alias gc='git commit -S -m'
+alias gp='git pull --rebase'
+
+alias finder='open .'
 alias watch='watch '
 alias vim='nvim'
 
