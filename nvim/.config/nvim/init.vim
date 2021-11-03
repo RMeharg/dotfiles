@@ -74,6 +74,12 @@ Plug 'neomake/neomake'
 " Git goodness
 Plug 'airblade/vim-gitgutter'
 
+Plug 'cappyzawa/fly-lint.vim'
+
+Plug 'tpope/vim-commentary'
+
+Plug 'junegunn/vim-emoji'
+
 call plug#end()
 call neomake#configure#automake('w')
 " lua require'lspconfig'.bashls.setup{}
@@ -81,3 +87,4 @@ call neomake#configure#automake('w')
 let mapleader = " "
 let g:neomake_virtualtext_current_error = 0
 
+noremap <leader>/ :Commentary<cr>
