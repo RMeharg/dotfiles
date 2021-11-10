@@ -84,7 +84,7 @@ call plug#end()
 call neomake#configure#automake('w')
 " lua require'lspconfig'.bashls.setup{}
 
-let mapleader = " "
+let mapleader = ","
 let g:neomake_virtualtext_current_error = 0
 
 noremap <leader>/ :Commentary<cr>

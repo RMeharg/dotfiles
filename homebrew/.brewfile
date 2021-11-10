@@ -24,6 +24,7 @@ tap 'homebrew/services'
 tap 'cloudfoundry/tap'
 tap 'starkandwayne/cf'
 tap 'vmware-tanzu/carvel'
+tap 'pivotal-cf/om https://github.com/pivotal-cf/om'
 
 ###########################################################################
 #
@@ -3111,6 +3112,7 @@ brew 'tanzu-community-edition'
 brew 'velero'
 brew 'jenv'
 brew 'minio/stable/mc'
+brew 'om'
 
 cask 'fly'
 cask 'powershell'
