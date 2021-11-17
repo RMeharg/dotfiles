@@ -3116,3 +3116,5 @@ brew 'om'
 
 cask 'fly'
 cask 'powershell'
+
+brew 'derailed/popeye/popeye'
