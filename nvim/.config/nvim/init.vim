@@ -80,11 +80,31 @@ Plug 'tpope/vim-commentary'
 
 Plug 'junegunn/vim-emoji'
 
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 call plug#end()
 call neomake#configure#automake('w')
 " lua require'lspconfig'.bashls.setup{}
 
-let mapleader = ","
+let mapleader = " "
 let g:neomake_virtualtext_current_error = 0
 
 noremap <leader>/ :Commentary<cr>
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>\ :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+" Smart way to move between panes
+map <c-up> <C-w><up>
+map <c-down> <C-w><down>
+map <c-left> <C-w><left>
+map <c-right> <C-w><right>

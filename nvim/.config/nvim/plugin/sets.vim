@@ -24,6 +24,7 @@ set scrolloff=8
 set signcolumn=yes
 set isfname+=@-@
 " set ls=0
+" fhkgjhgkjh
 
 " Give more space for displaying messages.
 set cmdheight=1
@@ -36,3 +37,5 @@ set updatetime=50
 set shortmess+=c
 
 set colorcolumn=80
+
+set encoding=UTF-8
