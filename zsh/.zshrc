@@ -5,8 +5,8 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Oh-My-ZSH + P10k
-plugins=(osx git git-flow brew history node npm kubectl vi-mode tmux)
-ZSH_CUSTOM="~/.oh-my-zsh-custom"
+plugins=(macos git git-flow brew history node npm kubectl vi-mode tmux)
+ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode auto      
 zstyle ':omz:update' frequency 13
