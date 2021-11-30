@@ -3118,3 +3118,7 @@ cask 'fly'
 cask 'powershell'
 
 brew 'derailed/popeye/popeye'
+
+brew 'pygments'
+
+brew 'fpp'

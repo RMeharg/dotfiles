@@ -3,9 +3,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export LANG="en_US.UTF-8" # Fix for OneDark Theme
 
 # Oh-My-ZSH + P10k
-plugins=(macos git git-flow brew history node npm kubectl vi-mode tmux)
+plugins=(macos git git-flow history systemadmin nmap kubectl kube-ps1 helm golang fzf vi-mode tmux fancy-ctrl-z dotenv colorize common-aliases)
+ZSH_TMUX_AUTOSTART=true
 ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode auto      
