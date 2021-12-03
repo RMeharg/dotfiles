@@ -1,10 +1,5 @@
 # : << EOF
 
-#set -g @plugin 'odedlaz/tmux-onedark-theme'
-set -g @plugin 'tmux-plugins/tmux-resurrect'   # Save/Restore sessions
-set -g @plugin 'tmux-plugins/tmux-continuum'   # Auto Save/Restore
-set -g @continuum-restore 'on'
-
 # -- windows & pane creation ---------------------------------------------------
 tmux_conf_new_window_retain_current_path=false
 tmux_conf_new_pane_retain_current_path=true
@@ -26,7 +21,7 @@ tmux_conf_theme_colour_8="#3e4452"    # dark gray
 tmux_conf_theme_colour_9="#98c379"    # yellow
 tmux_conf_theme_colour_10="#ff00af"   # pink
 tmux_conf_theme_colour_11="#98c379"   # green
-tmux_conf_theme_colour_12="#3e4452"   # light gray
+tmux_conf_theme_colour_12="#e4e4e4"   # light gray
 tmux_conf_theme_colour_13="#e4e4e4"   # white
 tmux_conf_theme_colour_14="#3e4452"   # dark gray
 tmux_conf_theme_colour_15="#3e4452"   # dark gray
@@ -196,7 +191,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" ❐ #S "
-tmux_conf_theme_status_right=" #{prefix}#{pairing}#{synchronized} | #{username}#{root} | #{hostname} "
+tmux_conf_theme_status_right="#{prefix}#{pairing}#{synchronized} | #{username}#{root} | #{hostname} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -354,6 +349,13 @@ tmux_conf_uninstall_plugins_on_reload=true
 # visit https://github.com/tmux-plugins for available plugins
 #set -g @plugin 'tmux-plugins/tmux-copycat'
 #set -g @plugin 'tmux-plugins/tmux-cpu'
+#
+#set -g @plugin 'odedlaz/tmux-onedark-theme'
+set -g @plugin 'tmux-plugins/tmux-sensible'    # Common sets
+set -g @plugin 'tmux-plugins/tmux-yank'        # Clipboard compatability
+set -g @plugin 'tmux-plugins/tmux-resurrect'   # Save/Restore sessions
+set -g @plugin 'tmux-plugins/tmux-continuum'   # Auto Save/Restore
+set -g @continuum-restore 'on'
 
 # -- custom variables ----------------------------------------------------------
 

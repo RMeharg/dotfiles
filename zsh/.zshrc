@@ -6,7 +6,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG="en_US.UTF-8" # Fix for OneDark Theme
 
 # Oh-My-ZSH + P10k
-plugins=(macos git git-flow history systemadmin nmap kubectl kube-ps1 helm golang fzf vi-mode tmux fancy-ctrl-z dotenv colorize common-aliases)
+plugins=(macos git git-flow history systemadmin nmap kubectl helm golang fzf vi-mode tmux fancy-ctrl-z dotenv colorize common-aliases)
 ZSH_TMUX_AUTOSTART=true
 ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 export ZSH="$HOME/.oh-my-zsh"
@@ -98,3 +98,4 @@ if command -v brew >/dev/null 2>&1; then
   [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
 fi
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
