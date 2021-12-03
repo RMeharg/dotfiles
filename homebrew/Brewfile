@@ -1,0 +1,217 @@
+# Common Packages: https://github.com/joelparkerhenderson/brewfile
+
+# Preflight
+tap 'homebrew/cask'
+tap 'homebrew/cask-drivers'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
+tap 'homebrew/core'
+tap 'homebrew/bundle'
+tap 'homebrew/services'
+tap "buo/cask-upgrade"
+tap 'cloudfoundry/tap'
+tap 'starkandwayne/cf'
+tap 'vmware-tanzu/carvel'
+tap 'pivotal-cf/om https://github.com/pivotal-cf/om'
+
+# Browsers
+cask 'firefox'
+cask 'firefox-developer-edition'
+cask 'brave-browser'
+cask 'google-chrome'
+
+# Chat
+cask 'discord'
+cask 'slack'
+
+# Terminal
+cask 'iterm2'
+brew 'pkg-config', link: true
+brew 'tmux'
+brew 'reattach-to-user-namespace'
+brew 'tmate'
+
+# Shell
+brew 'zsh'
+
+# Passwords
+cask 'lastpass'
+
+# Editors
+brew 'bat'
+brew 'less'
+brew 'most'
+brew 'vim'
+brew 'nvim'
+cask 'macvim'
+cask 'atom'
+cask 'sublime-text'
+
+# Office software
+cask "microsoft-office"
+
+# Downloaders
+brew 'curl', link: true
+brew 'wget'
+
+# Version control
+brew 'git'
+brew 'git-flow'
+cask 'sourcetree'
+
+# GNU
+brew 'gnu-sed'
+brew 'watch'
+
+# System
+brew 'gpg'
+brew 'openssl'
+brew 'pkg-config'
+brew 'fd'
+brew 'fzf'
+brew 'zoxide'
+
+# Command line system operator helpers
+brew 'eg-examples'
+brew 'tldr'
+brew 'howdoi'
+
+# File handling
+brew 'unzip'
+brew 'gzip'
+
+# File synchronization
+brew 'rsync'
+
+# Text search
+brew 'ripgrep'
+brew 'grep'
+brew 'ag'
+brew 'jq'
+brew 'yq'
+
+# Multimedia players
+cask 'vlc'
+
+# Server-Related
+brew 'docker'
+brew 'docker-compose'
+brew 'monit'
+
+# OSX Apps
+cask 'alfred'
+cask 'bartender'
+cask 'skype'
+cask 'spotify'
+cask 'karabiner-elements'
+cask 'zoom'
+
+# Mac App Store
+mas "Apple Configurator 2", id: 1037126344
+mas "Brightness Slider", id: 456624497
+mas "Color Picker", id: 641027709
+mas "Expressions", id: 913158085
+mas "Telegram", id: 747648890
+
+# Dev
+brew 'shellcheck'
+brew 'bats'
+
+cask 'postman'
+brew 'netcat'
+brew 'prettyping'
+brew 'nmap'
+brew 'certbot'
+cask 'macdown'
+
+# Languages
+brew 'go'
+brew 'openjdk'
+brew 'gradle'
+brew 'maven'
+brew 'node'
+brew 'python'
+brew 'python3'
+
+## Documentation
+cask 'dash'
+
+# Cloud
+brew 'azure-cli'
+brew 'awscli'
+tap 'wallix/awless'
+brew 'awless'
+brew 'gcloud'
+
+# Virtual machines
+cask 'virtualbox'
+cask 'vagrant'
+cask 'vagrant-manager'
+
+# Provisioning
+brew 'terraform'
+brew 'ansible'
+
+# Containeriztion
+cask 'docker'
+
+# Orchestration
+brew 'kubectl'
+brew 'minikube'
+
+brew 'libyaml'
+brew 'yamllint'
+brew 'tree'
+brew 'ack'
+brew 'base64'
+brew 'zsh-completions'
+
+# CloudFoundry / BOSH
+brew 'bbl'
+brew 'bosh-cli'
+brew 'cloudfoundry/tap/cf-cli@6'
+brew 'cloudfoundry/tap/credhub-cli'
+brew 'spruce'
+
+# VMWare Carvel
+brew 'ytt'
+brew 'kbld'
+brew 'kapp'
+brew 'kwt'
+brew 'imgpkg'
+brew 'vendir'
+
+# Everything else (custom)
+brew 'romkatv/powerlevel10k/powerlevel10k'
+brew 'buildpacks/tap/pack'
+brew 'octant'
+cask 'lens'
+cask 'shiftit'
+cask 'visual-studio-code'
+cask 'flycut'
+cask 'webex-meetings'
+cask 'microsoft-teams'
+brew 'pip'
+brew 'govc'
+brew 'krew'
+brew 'kube-ps1'
+brew 'kubectx'
+brew 'k9s'
+brew 'k6'
+brew 'helm'
+brew 'helmfile'
+brew 'kind'
+brew 'neovim'
+brew 'hadolint'
+brew 'stow'
+brew 'tanzu-community-edition'
+brew 'velero'
+brew 'jenv'
+brew 'minio/stable/mc'
+brew 'om'
+brew 'derailed/popeye/popeye'
+brew 'pygments'
+brew 'fpp'
+brew 'lima'
+cask 'fly'
+cask 'powershell'
