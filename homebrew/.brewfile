@@ -3113,12 +3113,9 @@ brew 'velero'
 brew 'jenv'
 brew 'minio/stable/mc'
 brew 'om'
-
+brew 'derailed/popeye/popeye'
+brew 'pygments'
+brew 'fpp'
+brew 'lima'
 cask 'fly'
 cask 'powershell'
-
-brew 'derailed/popeye/popeye'
-
-brew 'pygments'
-
-brew 'fpp'
