@@ -12,7 +12,6 @@ tap "buo/cask-upgrade"
 tap 'cloudfoundry/tap'
 tap 'starkandwayne/cf'
 tap 'vmware-tanzu/carvel'
-tap 'pivotal-cf/om https://github.com/pivotal-cf/om'
 
 # Browsers
 cask 'firefox'
