@@ -2,9 +2,7 @@
 if [[ -z $STOW_FOLDERS ]]; then
     export STOW_FOLDERS="nvim,tmux,zsh,personal,mac,homebrew"
 fi
-
 if [[ -z $DOTFILES ]]; then
     export DOTFILES=$HOME/.dotfiles
 fi
-
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
