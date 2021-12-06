@@ -1,6 +1,8 @@
 [submodule "personal"]
 	path = personal
 	url = git@github.com:rmeharg/.dotfiles-personal.git
+	update = rebase
+	branch = master
 [submodule "zsh/.oh-my-zsh"]
 	path = zsh/.oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh
