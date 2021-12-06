@@ -1,6 +1,5 @@
-syntax enable
+syntax on
 set background=dark
-
-"let g:onedark_style = 'darker'
-"colorscheme onedark
-colorscheme gruvbox
+let g:airline_theme='one'
+let g:one_allow_italics = 1
+colorscheme one
