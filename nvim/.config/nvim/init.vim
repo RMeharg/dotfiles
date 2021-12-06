@@ -31,7 +31,6 @@ Plug 'rafamadriz/friendly-snippets'
 
 Plug 'rust-lang/rust.vim'
 Plug 'darrikonn/vim-gofmt'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 Plug 'vim-utils/vim-man'
@@ -48,14 +47,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-" Themes
-Plug 'vim-conf-live/vimconflive2021-colorscheme'
-Plug 'flazz/vim-colorschemes'
-Plug 'chriskempson/base16-vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'rakr/vim-one'
-
-" HARPOON!!
+Plug 'rakr/vim-one' " Theme OneDark
 
 Plug 'mhinz/vim-rfc'
 
@@ -67,37 +59,29 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
-" (Optional) Multi-entry selection UI.
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf' " Fuzzy finder
+Plug 'tpope/vim-fugitive' " A Git wrapper
+Plug 'airblade/vim-gitgutter' " Show gitdiff in the gutter
 
 " Lintng like a god
 Plug 'neomake/neomake'
+Plug 'cappyzawa/fly-lint.vim' " FLY CLI Linting
+Plug 'tpope/vim-commentary' " Auto-comment blocks of text
 
-" Git goodness
-Plug 'airblade/vim-gitgutter'
-
-Plug 'cappyzawa/fly-lint.vim'
-
-Plug 'tpope/vim-commentary'
-
-Plug 'junegunn/vim-emoji'
+Plug 'ryanoasis/vim-devicons'
 
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+Plug 'sheerun/vim-polyglot' " Programming languages 
+Plug 'jiangmiao/auto-pairs' " Completion of brackets, parenthesis, quotes etc
+Plug 'preservim/tagbar' " File outliner such as class/variable/function identifiers
+Plug 'dyng/ctrlsf.vim' " File super search
+Plug 'Yggdroot/indentLine' " Indentation levels
+
 call plug#end()
-call neomake#configure#automake('w')
-" lua require'lspconfig'.bashls.setup{}
 
 let mapleader = " "
-let g:neomake_virtualtext_current_error = 0
-
-noremap <leader>/ :Commentary<cr>
-
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <leader>\ :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
@@ -110,3 +94,11 @@ map <c-up> <C-w><up>
 map <c-down> <C-w><down>
 map <c-left> <C-w><left>
 map <c-right> <C-w><right>
+
+" Plugin Configs
+call neomake#configure#automake('w')
+let g:neomake_virtualtext_current_error = 0
+
+noremap <leader>/ :Commentary<cr>
+nnoremap \ :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>

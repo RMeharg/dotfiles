@@ -123,6 +123,9 @@ brew 'nmap'
 brew 'certbot'
 cask 'macdown'
 
+# Fonts
+cask 'font-hack-nerd-font'
+
 # Languages
 brew 'go'
 brew 'openjdk'
