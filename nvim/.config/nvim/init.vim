@@ -13,7 +13,6 @@ Plug 'preservim/nerdtree' " The most awesome vim folder tree plugin with \
 Plug 'ryanoasis/vim-devicons' " Icons in nerdtree requires homebrew fonts
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " Color nerdtree files
 Plug 'sheerun/vim-polyglot' " Programming languages 
-Plug 'jiangmiao/auto-pairs' " Completion of brackets, parenthesis, quotes etc
 Plug 'preservim/tagbar' " Find class/variable/function identifiers in files
 Plug 'dyng/ctrlsf.vim' " File super search
 Plug 'Yggdroot/indentLine' " Indentation levels

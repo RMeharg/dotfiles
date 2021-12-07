@@ -22,3 +22,5 @@ echo "Upgrading packages..."
 brew upgrade
 echo "Cleaning up Homebrew installation..."
 brew cleanup
+echo "Upgrading casks..."
+brew cu -a

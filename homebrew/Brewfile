@@ -12,29 +12,15 @@ tap "buo/cask-upgrade"
 tap 'cloudfoundry/tap'
 tap 'starkandwayne/cf'
 tap 'vmware-tanzu/carvel'
+tap 'vmware-tanzu/tanzu'
+tap 'kryptco/tap/kr'
 
-# Browsers
-cask 'firefox'
-cask 'firefox-developer-edition'
-cask 'brave-browser'
-cask 'google-chrome'
-
-# Chat
-cask 'discord'
-cask 'slack'
-
-# Terminal
-cask 'iterm2'
+# Shell
+brew 'zsh'
 brew 'pkg-config', link: true
 brew 'tmux'
 brew 'reattach-to-user-namespace'
 brew 'tmate'
-
-# Shell
-brew 'zsh'
-
-# Passwords
-cask 'lastpass'
 
 # Editors
 brew 'bat'
@@ -42,12 +28,6 @@ brew 'less'
 brew 'most'
 brew 'vim'
 brew 'nvim'
-cask 'macvim'
-cask 'atom'
-cask 'sublime-text'
-
-# Office software
-cask "microsoft-office"
 
 # Downloaders
 brew 'curl', link: true
@@ -56,7 +36,6 @@ brew 'wget'
 # Version control
 brew 'git'
 brew 'git-flow'
-cask 'sourcetree'
 
 # GNU
 brew 'gnu-sed'
@@ -89,42 +68,14 @@ brew 'ag'
 brew 'jq'
 brew 'yq'
 
-# Multimedia players
-cask 'vlc'
-
-# Server-Related
-brew 'docker'
-brew 'docker-compose'
-brew 'monit'
-
-# OSX Apps
-cask 'alfred'
-cask 'bartender'
-cask 'skype'
-cask 'spotify'
-cask 'karabiner-elements'
-cask 'zoom'
-
-# Mac App Store
-mas "Apple Configurator 2", id: 1037126344
-mas "Brightness Slider", id: 456624497
-mas "Color Picker", id: 641027709
-mas "Expressions", id: 913158085
-mas "Telegram", id: 747648890
-
 # Dev
 brew 'shellcheck'
-brew 'bats'
 
-cask 'postman'
+# Networking
 brew 'netcat'
 brew 'prettyping'
 brew 'nmap'
 brew 'certbot'
-cask 'macdown'
-
-# Fonts
-cask 'font-hack-nerd-font'
 
 # Languages
 brew 'go'
@@ -135,38 +86,20 @@ brew 'node'
 brew 'python'
 brew 'python3'
 
-## Documentation
-cask 'dash'
-
 # Cloud
 brew 'azure-cli'
 brew 'awscli'
-tap 'wallix/awless'
-brew 'awless'
-brew 'gcloud'
-
-# Virtual machines
-cask 'virtualbox'
-cask 'vagrant'
-cask 'vagrant-manager'
 
 # Provisioning
 brew 'terraform'
 brew 'ansible'
 
 # Containeriztion
-cask 'docker'
+brew 'docker-compose'
 
 # Orchestration
 brew 'kubectl'
 brew 'minikube'
-
-brew 'libyaml'
-brew 'yamllint'
-brew 'tree'
-brew 'ack'
-brew 'base64'
-brew 'zsh-completions'
 
 # CloudFoundry / BOSH
 brew 'bbl'
@@ -187,13 +120,6 @@ brew 'vendir'
 brew 'romkatv/powerlevel10k/powerlevel10k'
 brew 'buildpacks/tap/pack'
 brew 'octant'
-cask 'lens'
-cask 'shiftit'
-cask 'visual-studio-code'
-cask 'flycut'
-cask 'webex-meetings'
-cask 'microsoft-teams'
-brew 'pip'
 brew 'govc'
 brew 'krew'
 brew 'kube-ps1'
@@ -203,7 +129,6 @@ brew 'k6'
 brew 'helm'
 brew 'helmfile'
 brew 'kind'
-brew 'neovim'
 brew 'hadolint'
 brew 'stow'
 brew 'tanzu-community-edition'
@@ -215,5 +140,52 @@ brew 'derailed/popeye/popeye'
 brew 'pygments'
 brew 'fpp'
 brew 'lima'
+brew 'libyaml'
+brew 'yamllint'
+brew 'tree'
+brew 'ack'
+brew 'base64'
+brew 'zsh-completions'
+brew 'kr'
+
+# Mac App Store
+brew 'mas' # mas search <name>
+#mas "Apple Configurator 2", id: 1037126344
+#mas "Brightness Slider", id: 456624497
+#mas "Color Picker", id: 641027709
+#mas "Expressions", id: 913158085
+#mas "Telegram", id: 747648890
+
+# Casks
+cask 'font-hack-nerd-font'
 cask 'fly'
+cask 'firefox'
+cask 'firefox-developer-edition'
+cask 'google-chrome'
+cask 'discord'
+cask 'slack'
+cask 'iterm2'
+cask 'atom'
+cask 'sublime-text'
+cask 'vlc'
+cask 'alfred'
+cask 'bartender'
+cask 'skype'
+cask 'spotify'
+cask 'karabiner-elements'
+cask 'zoom'
+cask 'postman'
+cask 'dash'
+cask 'macdown'
+cask 'google-cloud-sdk'
+cask 'virtualbox'
+cask 'vagrant'
+cask 'docker'
+cask 'vagrant-manager'
+cask 'shiftit'
+cask 'visual-studio-code'
+cask 'flycut'
+cask 'webex-meetings'
+cask 'microsoft-teams'
 cask 'powershell'
+cask 'lens'
