@@ -13,7 +13,8 @@ tap 'cloudfoundry/tap'
 tap 'starkandwayne/cf'
 tap 'vmware-tanzu/carvel'
 tap 'vmware-tanzu/tanzu'
-tap 'kryptco/tap/kr'
+tap 'kryptco/tap'
+tap 'hidetatz/tap'
 
 # Shell
 brew 'zsh'
@@ -95,6 +96,7 @@ brew 'terraform'
 brew 'ansible'
 
 # Containeriztion
+brew 'docker'
 brew 'docker-compose'
 
 # Orchestration
@@ -147,6 +149,7 @@ brew 'ack'
 brew 'base64'
 brew 'zsh-completions'
 brew 'kr'
+brew 'kubecolor'
 
 # Mac App Store
 brew 'mas' # mas search <name>
