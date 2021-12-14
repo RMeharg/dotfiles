@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+
+# TODO: Install xcode first
+# TODO: Git install to clone repo and homebrew initial install missing
+# TODO: Fix packages on Apple Silicone
+# TODO: bbl, cloudfoundry/tap/cf-cli@6, cloudfoundry/tap/credhub-cli, kbld, kwt, kr, google-chrome, virtualbox, docker
+# TODO: Oh-my-zsh, oh-my-tmux fix 
+
 if [[ -z $STOW_FOLDERS ]]; then
     export STOW_FOLDERS="nvim,tmux,zsh,personal,mac,homebrew"
 fi

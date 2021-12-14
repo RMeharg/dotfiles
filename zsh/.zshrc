@@ -79,7 +79,7 @@ bindkey -v
 export GPG_TTY=$(tty)
 
 # Helm
-source ~/.helmrc
+[ -f ~/.helmrc ] && source ~/.helmrc
 
 # Slows shell alot but use kubecolor autocomplete
 autoload -U compinit
@@ -95,3 +95,6 @@ if command -v brew >/dev/null 2>&1; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias mbrew='arch -arm64e /opt/homebrew/bin/brew'

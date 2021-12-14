@@ -1,5 +1,6 @@
 .DS_Store
 
+nvim/.local/*
 nvim/.config/*
 !nvim/.config/nvim/*
 tmux/.tmux/resurrect/*
