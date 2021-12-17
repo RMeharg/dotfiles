@@ -36,7 +36,7 @@
       if { ! test -r "${HOME}/Library/Application Support/com.apple.TCC/TCC.db" 2>&1; } | grep -q 'Operation not permitted'; then
         echo 'Add “Terminal.app” to System Preferences -> Security -> Privacy -> Full Disk Access' 1>&2
         /usr/bin/open 'x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles'
-        /usr/bin/open -R /Applications/Utilities/Terminal.app
+        /usr/bin/open -R /System/Applications/Utilities/Terminal.app
         exit 1
       fi
 
@@ -47,10 +47,10 @@
     else
       # Accessibility Access
       if test -z "$(/usr/bin/sqlite3 '/Library/Application Support/com.apple.TCC/TCC.db' \
-                      "SELECT * FROM access WHERE client = 'com.apple.Terminal' AND allowed = 1")"; then
+                      "SELECT * FROM access WHERE client = 'com.apple.System/Terminal' AND allowed = 1")"; then
         echo "\033[0;31mPlease enable Accessibility Access for 'Terminal.app' in System Preferences.\033[0m" 1>&2
         /usr/bin/open 'x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility'
-        /usr/bin/open -R /Applications/Utilities/Terminal.app
+        /usr/bin/open -R /System/Applications/Utilities/Terminal.app
         exit 1
       fi
     fi
