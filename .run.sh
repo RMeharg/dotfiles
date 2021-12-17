@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Work in progress. source https://github.com/reitermarkus/dotfiles
-
 {
   # Abort on errors.
   set -e
@@ -89,7 +87,7 @@
   fi
 
   # Use local version or download repository.
-  if [ "$(/usr/bin/basename "${0}")" = '.sh' ]; then
+  if [ "$(/usr/bin/basename "${0}")" = '.run.sh' ]; then
     cd "$(/usr/bin/dirname "$0")"
   else
     echo '\033[0;34mDownloading Github Repository …\033[0m'
@@ -108,67 +106,7 @@
   fi
 
   # Run scripts.
-  /usr/bin/rake \
-    files \
-    xcode:command_line_utilities \
-    brew \
-    ruby \
-    rust \
-    python \
-    mas \
-    xcode:accept_license \
-    fonts \
-    mackup \
-    local_scripts \
-    bash \
-    fish \
-    git \
-    github \
-    xcode:defaults \
-    itunes \
-    rapidclick \
-    hazel \
-    virtualbox \
-    steam \
-    teamspeak \
-    csgo \
-    cities_skylines \
-    tex \
-    ccache \
-    sccache \
-    make \
-    pam \
-    keyboard \
-    ui \
-    rocket \
-    safari \
-    locale \
-    startup \
-    transmission \
-    locate_db \
-    menubar \
-    mediathekview \
-    deliveries \
-    tower \
-    bettersnaptool \
-    screensaver \
-    parallels \
-    vagrant \
-    telegram \
-    finder \
-    crash_reporter \
-    dnsmasq \
-    loginwindow \
-    textmate \
-    dock \
-    softwareupdate \
-    terminal \
-    rfc \
-    x11 \
-    z \
-    keka \
-    arduino \
-    mouse_trackpad
+  /usr/bin/bash ./.install-mac
 
   at_exit 'echo "\033[0;30mDone.\033[0m"'
 
