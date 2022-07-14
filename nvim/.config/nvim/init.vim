@@ -12,10 +12,10 @@ Plug 'tpope/vim-commentary' " Auto-comment blocks of text
 Plug 'preservim/nerdtree' " The most awesome vim folder tree plugin with \
 Plug 'ryanoasis/vim-devicons' " Icons in nerdtree requires homebrew fonts
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " Color nerdtree files
-Plug 'sheerun/vim-polyglot' " Programming languages 
 Plug 'preservim/tagbar' " Find class/variable/function identifiers in files
 Plug 'dyng/ctrlsf.vim' " File super search
-Plug 'Yggdroot/indentLine' " Indentation levels
+"Plug 'Yggdroot/indentLine' " Indentation levels
+Plug 'andrewferrier/vim-wrapping-softhard' " ws wh wt WordWrap
 
 "Language server
 Plug 'autozimu/LanguageClient-neovim', {
@@ -30,11 +30,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'mattn/emmet-vim'
-" Plug 'nvim-lua/completion-nvim'
 Plug 'glepnir/lspsaga.nvim'
-Plug 'simrat39/symbols-outline.nvim'
-" Plug 'tjdevries/nlua.nvim'
-" Plug 'tjdevries/lsp_extensions.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'mfussenegger/nvim-dap'
@@ -58,9 +54,13 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
+" Plug 'nvim-lua/completion-nvim'
+" Plug 'tjdevries/nlua.nvim'
+" Plug 'tjdevries/lsp_extensions.nvim'
+
 call plug#end()
 
-let mapleader = " "
+let mapleader = ","
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
@@ -85,3 +85,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 let g:neoformat_basic_format_align = 1 " Enable alignment
 let g:neoformat_basic_format_retab = 1 " Enable tab to spaces conversion
 let g:neoformat_basic_format_trim = 1 " Enable trimmming of trailing whitespace
+
+nnoremap <Leader>ws :SoftWrapMode<CR>
+nnoremap <Leader>wh :HardWrapMode<CR>
+nnoremap <Leader>wt :ToggleWrapMode<CR>

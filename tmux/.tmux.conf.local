@@ -1,7 +1,7 @@
 # : << EOF
 
 # -- windows & pane creation ---------------------------------------------------
-tmux_conf_new_window_retain_current_path=false
+tmux_conf_new_window_retain_current_path=true
 tmux_conf_new_pane_retain_current_path=true
 tmux_conf_new_pane_reconnect_ssh=false
 tmux_conf_new_session_prompt=false
@@ -12,7 +12,7 @@ tmux_conf_24b_colour=true
 # default theme
 tmux_conf_theme_colour_1="#3e4452"    # dark gray
 tmux_conf_theme_colour_2="#474d5a"    # gray
-tmux_conf_theme_colour_3="#3e4452"    # light gray
+tmux_conf_theme_colour_3="#61afef"    # light blue
 tmux_conf_theme_colour_4="#61afef"    # light blue
 tmux_conf_theme_colour_5="#98c379"    # yellow
 tmux_conf_theme_colour_6="#3e4452"    # dark gray
@@ -205,7 +205,7 @@ tmux_conf_uninstall_plugins_on_reload=true
 
 set -g @plugin 'tmux-plugins/tmux-sensible'    # Common sets
 set -g @plugin 'tmux-plugins/tmux-yank'        # Clipboard compatability
-set -g @plugin 'tmux-plugins/tmux-resurrect'   # Save/Restore sessions
+#set -g @plugin 'tmux-plugins/tmux-resurrect'   # Save/Restore sessions
 set -g @plugin 'tmux-plugins/tmux-continuum'   # Auto Save/Restore
 set -g @continuum-restore 'on'
 

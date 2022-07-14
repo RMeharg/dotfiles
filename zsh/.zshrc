@@ -2,7 +2,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
 export LANG="en_US.UTF-8" # Fix for OneDark Theme
 
 # Oh-My-ZSH + P10k
@@ -45,6 +45,11 @@ alias repush='git add -A && git commit --amend --no-edit --reset-author && git p
 alias pull='git pull --rebase'
 alias gc='git commit -S -m'
 alias gp='git pull --rebase'
+alias squash='git reset $(git merge-base master $(git branch --show-current))'
+alias gitsuperclean='git reset --hard; git clean --force -d -x'
+alias branches='git branch -a'
+alias checkout='git checkout '
+
 alias finder='open .'
 alias watch='watch '
 alias vim='nvim'
@@ -58,8 +63,9 @@ alias pip=/usr/local/bin/pip3.9
 export PATH="$PATH:/Users/altoros/Library/Python/3.9/bin"
 
 # Golang
-export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -76,7 +82,7 @@ bindkey -v
 . $(pack completion --shell zsh)
 
 # GPG Keys for krypt
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
 
 # Helm
 [ -f ~/.helmrc ] && source ~/.helmrc
@@ -96,5 +102,6 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias ibrew='arch -x86_64 /usr/local/bin/brew'
-alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
+export TFENV_ARCH=amd64
+
+[[ -s "/Users/altoros/.gvm/scripts/gvm" ]] && source "/Users/altoros/.gvm/scripts/gvm"

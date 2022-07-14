@@ -1,8 +1,8 @@
 set path+=**
 
-set background=dark
+set et sts=2 sw=2 ts=2 " Handy
 
-set guicursor=
+set background=dark
 set relativenumber
 set nohlsearch
 set hidden
@@ -42,6 +42,8 @@ set encoding=UTF-8
 set splitbelow " Always split below
 
 set mouse=a " Enable mouse drag on window splits
+
+set formatoptions-=tc " Autowrap on textwidth
 
 " PLUGIN CONFIGS 
 let g:AutoPairsShortcutToggle = '<C-P>'
