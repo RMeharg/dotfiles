@@ -38,12 +38,12 @@ SAVEHIST=$HISTSIZE
 # Aliases
 alias gs='git status'
 alias gaa='git add -A'
-alias gam='git commit --amend --no-edit --reset-author'
+alias gam='git duet-commit -v --amend --no-edit --reset-author'
 alias push='git push'
 alias fpush='git push --force'
 alias repush='git add -A && git commit --amend --no-edit --reset-author && git push --force'
 alias pull='git pull --rebase'
-alias gc='git commit -S -m'
+alias gc='git duet-commit -v -S -m'
 alias gp='git pull --rebase'
 alias squash='git reset $(git merge-base master $(git branch --show-current))'
 alias gitsuperclean='git reset --hard; git clean --force -d -x'
@@ -105,3 +105,11 @@ fi
 export TFENV_ARCH=amd64
 
 [[ -s "/Users/altoros/.gvm/scripts/gvm" ]] && source "/Users/altoros/.gvm/scripts/gvm"
+
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
+
+export GIT_DUET_GLOBAL=true
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
