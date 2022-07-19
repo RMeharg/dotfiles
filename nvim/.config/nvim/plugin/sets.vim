@@ -25,6 +25,9 @@ set signcolumn=yes
 set isfname+=@-@
 " set ls=0
 
+" Show filename
+set statusline+=%F
+
 " Give more space for displaying messages.
 set cmdheight=1
 

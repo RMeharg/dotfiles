@@ -16,6 +16,11 @@ source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 source $ZSH/oh-my-zsh.sh
 source ~/.p10k.zsh
 
+# load z
+if command -v brew >/dev/null 2>&1; then
+  [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+fi
+
 # Homebrew add sbin to PATH
 export PATH="/usr/local/sbin:$PATH"
 
@@ -49,6 +54,8 @@ alias squash='git reset $(git merge-base master $(git branch --show-current))'
 alias gitsuperclean='git reset --hard; git clean --force -d -x'
 alias branches='git branch -a'
 alias checkout='git checkout '
+alias stash='git stash --include-untracked'
+alias pop='git stash pop'
 
 alias finder='open .'
 alias watch='watch '
@@ -95,11 +102,6 @@ alias k=kubecolor
 ## kubectl krew plugins
 export PATH="${PATH}:${HOME}/.krew/bin"
 
-# load z
-if command -v brew >/dev/null 2>&1; then
-  [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
-fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export TFENV_ARCH=amd64
@@ -113,3 +115,4 @@ export GIT_DUET_GLOBAL=true
 eval "$(rbenv init -)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+

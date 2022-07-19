@@ -27,11 +27,11 @@ Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
-"Language server
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+""Language server
+"Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh',
+"    \ }
 
 " TOOD: Unsorted mess of plugins
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -254,3 +254,7 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
