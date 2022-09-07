@@ -205,7 +205,7 @@ tmux_conf_uninstall_plugins_on_reload=true
 
 set -g @plugin 'tmux-plugins/tmux-sensible'    # Common sets
 set -g @plugin 'tmux-plugins/tmux-yank'        # Clipboard compatability
-#set -g @plugin 'tmux-plugins/tmux-resurrect'   # Save/Restore sessions
+#set -g @plugin 'tmux-plugins/tmux-resurrect'  # Save/Restore sessions
 set -g @plugin 'tmux-plugins/tmux-continuum'   # Auto Save/Restore
 set -g @continuum-restore 'on'
 

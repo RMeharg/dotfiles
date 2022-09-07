@@ -46,10 +46,9 @@ alias gaa='git add -A'
 alias gam='git duet-commit -v --amend --no-edit --reset-author'
 alias push='git push'
 alias fpush='git push --force'
-alias repush='git add -A && git commit --amend --no-edit --reset-author && git push --force'
+alias repush='git add -A && git duet-commit -v --amend --no-edit --reset-author && git push --force'
 alias pull='git pull --rebase'
 alias gc='git duet-commit -v -S -m'
-alias gp='git pull --rebase'
 alias squash='git reset $(git merge-base master $(git branch --show-current))'
 alias gitsuperclean='git reset --hard; git clean --force -d -x'
 alias branches='git branch -a'
@@ -60,6 +59,9 @@ alias pop='git stash pop'
 alias finder='open .'
 alias watch='watch '
 alias vim='nvim'
+alias zshrc='vim ~/.zshrc'
+
+export GIT_DUET_GLOBAL=true
 
 # JDK Path
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
@@ -73,6 +75,8 @@ export PATH="$PATH:/Users/altoros/Library/Python/3.9/bin"
 export GOPATH=$(go env GOPATH)
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+export GOPRIVATE=go.video.xarth.tv,code.justin.tv
+#export GO111MODULE=on
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -81,6 +85,12 @@ else
   export EDITOR='nvim'
   export VISUAL='nvim'
 fi
+
+# Ruby rbenv
+eval "$(rbenv init -)"
+
+# Node Yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Vi-mode
 bindkey -v
@@ -95,24 +105,17 @@ export GPG_TTY=$TTY
 [ -f ~/.helmrc ] && source ~/.helmrc
 
 # Slows shell alot but use kubecolor autocomplete
-autoload -U compinit
-compinit
-alias k=kubecolor
+# autoload -U compinit
+# compinit
+# alias k=kubecolor
 
 ## kubectl krew plugins
 export PATH="${PATH}:${HOME}/.krew/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export TFENV_ARCH=amd64
-
 [[ -s "/Users/altoros/.gvm/scripts/gvm" ]] && source "/Users/altoros/.gvm/scripts/gvm"
 
+export TFENV_ARCH=amd64
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
-
-export GIT_DUET_GLOBAL=true
-eval "$(rbenv init -)"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-

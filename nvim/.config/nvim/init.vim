@@ -124,7 +124,7 @@ let g:neoformat_basic_format_trim = 1 " Enable trimmming of trailing whitespace
 
 nnoremap <Leader>ws :SoftWrapMode<CR>
 nnoremap <Leader>wh :HardWrapMode<CR>
-nnoremap <Leader>wt :ToggleWrapMode<CR>
+nnoremap <Leader>cow :ToggleWrapMode<CR>
 
 let g:coc_global_extensions = [
     \ 'coc-snippets',
@@ -255,6 +255,13 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+nnoremap <leader>r :%s///gc<left><left><left><left>
+
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
+
+" Better find and replace, use / to find then leader (,) fr
+map <leader>fr :%s///g<left><left>
+map <leader>frl :s///g<left><left>
+

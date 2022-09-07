@@ -81,6 +81,7 @@ brew 'certbot'
 
 # Languages
 brew 'go'
+brew 'golangci-lint'
 brew 'openjdk'
 brew 'gradle'
 brew 'maven'
@@ -106,7 +107,7 @@ brew 'kubectl'
 brew 'minikube'
 
 # CloudFoundry / BOSH
-brew 'bbl'
+#brew 'bbl'
 brew 'bosh-cli'
 brew 'cloudfoundry/tap/cf-cli@6'
 brew 'cloudfoundry/tap/credhub-cli'
@@ -152,6 +153,7 @@ brew 'base64'
 brew 'zsh-completions'
 brew 'kr'
 brew 'kubecolor'
+brew 'protobuf'
 
 # Mac App Store
 brew 'mas' # mas search <name>
