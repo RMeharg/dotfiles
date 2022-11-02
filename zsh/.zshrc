@@ -6,6 +6,7 @@ export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
 export LANG="en_US.UTF-8" # Fix for OneDark Theme
 
 # Oh-My-ZSH + P10k
+#plugins=(macos git git-flow history systemadmin nmap kubectl helm golang fzf tmux fancy-ctrl-z dotenv colorize common-aliases)
 plugins=(macos git git-flow history systemadmin nmap kubectl helm golang fzf vi-mode tmux fancy-ctrl-z dotenv colorize common-aliases)
 ZSH_TMUX_AUTOSTART=true
 ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
@@ -49,7 +50,7 @@ alias fpush='git push --force'
 alias repush='git add -A && git duet-commit -v --amend --no-edit --reset-author && git push --force'
 alias pull='git pull --rebase'
 alias gc='git duet-commit -v -S -m'
-alias squash='git reset $(git merge-base master $(git branch --show-current))'
+alias squash='git reset $(git merge-base main $(git branch --show-current))'
 alias gitsuperclean='git reset --hard; git clean --force -d -x'
 alias branches='git branch -a'
 alias checkout='git checkout '

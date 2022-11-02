@@ -22,6 +22,7 @@ Plug 'dyng/ctrlsf.vim' " File super search
 "Plug 'Yggdroot/indentLine' " Indentation levels
 Plug 'andrewferrier/vim-wrapping-softhard' " ws wh wt WordWrap
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+Plug 'ntpeters/vim-better-whitespace'
 
 "Plug 'christoomey/vim-tmux-navigator'
 
@@ -264,4 +265,3 @@ endif
 " Better find and replace, use / to find then leader (,) fr
 map <leader>fr :%s///g<left><left>
 map <leader>frl :s///g<left><left>
-
