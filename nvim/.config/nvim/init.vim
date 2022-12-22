@@ -14,9 +14,8 @@ Plug 'neomake/neomake' " Lintng like a god
 Plug 'cappyzawa/fly-lint.vim' " FLY CLI Linting
 Plug 'tpope/vim-commentary' " Auto-comment blocks of text
 Plug 'preservim/nerdtree' " The most awesome vim folder tree plugin with \
-Plug 'Xuyuanp/nerdtree-git-plugin' 
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons' " Icons in nerdtree requires homebrew fonts
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " Color nerdtree files
 Plug 'preservim/tagbar' " Find class/variable/function identifiers in files
 Plug 'dyng/ctrlsf.vim' " File super search
 "Plug 'Yggdroot/indentLine' " Indentation levels
@@ -65,7 +64,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
-Plug 'sheerun/vim-polyglot' " Programming languages 
+Plug 'sheerun/vim-polyglot' " Programming languages
 
 " Plug 'nvim-lua/completion-nvim'
 " Plug 'tjdevries/nlua.nvim'
