@@ -10,7 +10,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/services'
 tap "buo/cask-upgrade"
 tap 'cloudfoundry/tap'
-tap 'starkandwayne/cf'
+#tap 'starkandwayne/cf'
 tap 'vmware-tanzu/carvel'
 tap 'vmware-tanzu/tanzu'
 tap 'kryptco/tap'
@@ -94,8 +94,8 @@ brew 'azure-cli'
 brew 'awscli'
 
 # Provisioning
-# brew 'terraform' # conflicts with tfenv
-brew 'tfenv'
+brew 'terraform' # conflicts with tfenv, required for cf
+#brew 'tfenv'
 brew 'ansible'
 
 # Containeriztion
@@ -107,17 +107,18 @@ brew 'kubectl'
 brew 'minikube'
 
 # CloudFoundry / BOSH
-#brew 'bbl'
+brew 'bbl'
 brew 'bosh-cli'
-brew 'cloudfoundry/tap/cf-cli@6'
-brew 'cloudfoundry/tap/credhub-cli'
+brew 'cf-cli@8'
+#brew 'credhub-cli' # arch issue
+brew 'cloudfoundry/tap/uaa-cli'
 brew 'spruce'
 
 # VMWare Carvel
 brew 'ytt'
 brew 'kbld'
 brew 'kapp'
-brew 'kwt'
+#brew 'kwt' arch issue
 brew 'imgpkg'
 brew 'vendir'
 
@@ -150,7 +151,7 @@ brew 'tree'
 brew 'ack'
 brew 'base64'
 brew 'zsh-completions'
-brew 'kr'
+#brew 'kryptco/tap/kr'
 brew 'kubecolor'
 brew 'protobuf'
 
@@ -184,7 +185,7 @@ cask 'postman'
 cask 'dash'
 cask 'macdown'
 cask 'google-cloud-sdk'
-cask 'virtualbox'
+#cask 'virtualbox' arch issue
 cask 'vagrant'
 cask 'docker'
 cask 'vagrant-manager'

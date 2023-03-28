@@ -2,16 +2,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:/usr/local/homebrew/bin:$PATH
 export LANG="en_US.UTF-8" # Fix for OneDark Theme
 
 # Oh-My-ZSH + P10k
-#plugins=(macos git git-flow history systemadmin nmap kubectl helm golang fzf tmux fancy-ctrl-z dotenv colorize common-aliases)
-plugins=(macos git git-flow history systemadmin nmap kubectl helm golang fzf vi-mode tmux fancy-ctrl-z dotenv colorize common-aliases)
+plugins=(macos git git-flow history systemadmin nmap kubectl helm golang fzf tmux fancy-ctrl-z dotenv colorize common-aliases)
+#plugins=(macos git git-flow history systemadmin nmap kubectl helm golang fzf vi-mode tmux fancy-ctrl-z dotenv colorize common-aliases)
 ZSH_TMUX_AUTOSTART=true
 ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
 export ZSH="$HOME/.oh-my-zsh"
-zstyle ':omz:update' mode auto      
+zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 13
 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 source $ZSH/oh-my-zsh.sh
@@ -62,6 +62,8 @@ alias watch='watch '
 alias vim='nvim'
 alias zshrc='vim ~/.zshrc'
 
+alias bosh='bosh-cli '
+
 export GIT_DUET_GLOBAL=true
 
 # JDK Path
@@ -76,7 +78,7 @@ export PATH="$PATH:/Users/altoros/Library/Python/3.9/bin"
 export GOPATH=$(go env GOPATH)
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-export GOPRIVATE=go.video.xarth.tv,code.justin.tv
+#export GOPRIVATE=go.video.xarth.tv,code.justin.tv
 #export GO111MODULE=on
 
 if [[ -n $SSH_CONNECTION ]]; then
@@ -118,5 +120,14 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 [[ -s "/Users/altoros/.gvm/scripts/gvm" ]] && source "/Users/altoros/.gvm/scripts/gvm"
 
 export TFENV_ARCH=amd64
+
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
+alias axbrew='arch -x86_64 /usr/local/homebrew/bin/brew'
+
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+alias cf6='/usr/local/homebrew/Cellar/cf-cli@6/6.53.0/bin/cf6 '

@@ -15,7 +15,7 @@ Plug 'cappyzawa/fly-lint.vim' " FLY CLI Linting
 Plug 'tpope/vim-commentary' " Auto-comment blocks of text
 Plug 'preservim/nerdtree' " The most awesome vim folder tree plugin with \
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons' " Icons in nerdtree requires homebrew fonts
+"Plug 'ryanoasis/vim-devicons' " Icons in nerdtree requires homebrew fonts
 Plug 'preservim/tagbar' " Find class/variable/function identifiers in files
 Plug 'dyng/ctrlsf.vim' " File super search
 "Plug 'Yggdroot/indentLine' " Indentation levels

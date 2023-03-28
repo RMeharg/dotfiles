@@ -1,11 +1,5 @@
 # : << EOF
 
-# -- windows & pane creation ---------------------------------------------------
-tmux_conf_new_window_retain_current_path=true
-tmux_conf_new_pane_retain_current_path=true
-tmux_conf_new_pane_reconnect_ssh=false
-tmux_conf_new_session_prompt=false
-
 # -- display -------------------------------------------------------------------
 tmux_conf_24b_colour=true
 
@@ -190,24 +184,9 @@ tmux_conf_copy_to_os_clipboard=true
 # increase history size
 set -g history-limit 10000
 
-# start with mouse mode enabled
-set -g mouse on
-
 # force Vi mode
 #set -g status-keys vi
 #set -g mode-keys vi
-
-# -- tpm -----------------------------------------------------------------------
-
-tmux_conf_update_plugins_on_launch=true
-tmux_conf_update_plugins_on_reload=true
-tmux_conf_uninstall_plugins_on_reload=true
-
-set -g @plugin 'tmux-plugins/tmux-sensible'    # Common sets
-set -g @plugin 'tmux-plugins/tmux-yank'        # Clipboard compatability
-#set -g @plugin 'tmux-plugins/tmux-resurrect'  # Save/Restore sessions
-set -g @plugin 'tmux-plugins/tmux-continuum'   # Auto Save/Restore
-set -g @continuum-restore 'on'
 
 # -- custom variables ----------------------------------------------------------
 
